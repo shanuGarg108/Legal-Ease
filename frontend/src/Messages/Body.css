@@ -1,0 +1,206 @@
+.body {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 1em;
+  height: 85vh;
+  overflow: hidden;
+}
+
+.child {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chathead {
+  padding: 0.5rem;
+}
+
+.chats {
+  border: 0.5px solid #E0E0E0;
+  overflow-y: scroll;
+  flex: 0.25; /* Covers one-fourth of the screen */
+  padding: 0rem;
+  background-color: #f8f9fa; /* Light background for users list */
+  justify-content: flex-start;
+}
+
+.users {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user {
+  background-color: #ffffff; /* White background for user item */
+  padding: 0.75rem;
+  border: 0.5px solid #E0E0E0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.user:hover {
+  background-color: #f1f1f1; /* Light grey background on hover */
+}
+
+.user:focus,
+.user:visible {
+  outline: none;
+  background-color: #28BF69;
+}
+
+.circle {
+  border-radius: 50%;
+  background-color: grey;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Amethysta";
+  color: #2B6745;
+  flex-grow: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chatsection {
+  
+  background-color: #EDF5ED;
+  border-top: 0.5px solid #E0E0E0;
+
+  
+}
+
+.chats1,
+.chats2 {
+  max-width: 60%;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  font-family: "Amethysta";
+  word-wrap: break-word;
+  margin: 0.5rem 0; /* Add margin between messages */
+}
+
+.chats1 {
+  background-color: #DCF8C6; /* WhatsApp-like color */
+  border-radius: 15px 0 15px 15px;
+  align-self: flex-end; /* Align user messages to the right */
+}
+
+.chats2 {
+  background-color: #ffffff;
+  border-radius: 0px 15px 15px 15px;
+  align-self: flex-start; /* Align other users' messages to the left */
+}
+
+.writingcontainer {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  
+  border-top: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+
+#chatbox {
+  border: none;
+  
+  background-color: #ffffff;
+  outline: none;
+  width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  font-family: "Amethysta";
+  font-size: 1rem;
+  margin-right: 1rem;
+}
+
+#chatbox:focus {
+    outline: none;
+    border-color: white;
+    box-shadow: none;
+    background-color: white;
+
+}
+
+#chatbox::placeholder {
+  font-family: "Amethysta";
+  color: #6E7C72;
+  font-size: 1rem;
+}
+
+.writingcontainer button {
+  background-color: #28BF69;
+  color: white;
+  font-family: "Amethysta";
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+
+
+
+.chatsection {
+    display: flex;
+    flex-direction: column; 
+    /* Reverse column order to place the latest message at the bottom */
+     /* Set a fixed height for the chat container */
+    overflow-y: scroll; /* Enables vertical scrolling */
+     /* Smooth scrolling effect */
+     /* Optional padding */
+}
+
+.user1 {
+    display: flex;
+    justify-content: flex-end; /* Aligns current user's messages to the right */
+    margin-bottom: 0.5rem;
+}
+
+.user2 {
+    display: flex;
+    justify-content: flex-start; /* Aligns other user's messages to the left */
+    margin-bottom: 0.5rem;
+}
+
+.chats1 {
+    background-color: #DCF8C6; /* WhatsApp-like color */
+    border-radius: 15px 0 15px 15px;
+    padding: 0.5rem 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.chats2 {
+    background-color: #ffffff;
+    border-radius: 0 15px 15px 15px;
+    padding: 0.5rem 1rem;
+    max-width: 80%;
+    word-wrap: break-word;
+    
+}
+
+.messages {
+  background-color: #EDF5ED ;
+}

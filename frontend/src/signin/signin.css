@@ -1,0 +1,403 @@
+.container {
+    font-family: "Kaisei HarunoUmi";
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    flex-wrap: wrap; 
+}
+
+.leftside, .rightside {
+    flex: 1;
+    min-width: 300px; 
+    padding: 20px; 
+}
+
+.leftside {
+    display: flex;
+    flex-direction: column;
+    background-color: #edf5ed;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-start; 
+    align-items: center; 
+    padding-top: 10vh; 
+}
+
+.img {
+    position: relative;
+    margin-bottom: 10px;
+    top: 0;
+}
+
+img {
+    width: 4vw; 
+    height: auto; 
+}
+
+.Legalease {
+    font-weight: normal;
+    font-size: 3rem; 
+    color: #2B6745;
+    text-align: center;
+    margin: 10px 0; 
+}
+
+.paragraph {
+    font-size: 1.2rem; 
+    text-align: center;
+    letter-spacing: 1px;
+    margin: 10px 0; 
+    color: #6B7A71;
+    letter-spacing: 0.4em;
+    line-height: 1.5em;
+}
+
+.circle1, .circle2, .circle3 {
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    border-radius: 50%;
+    opacity: 80%;
+}
+
+.circle1 {
+    background-color: #2B6745;
+    top: 70vh;
+    left: -20vw;
+    
+}
+
+.circle2 {
+    background-color:rgba(28, 112, 52, 0.7 );
+    top: 80vh;
+    left: 6vw;
+    
+}
+
+.circle3 {
+    background-color: rgba(27, 114, 49, 0.95);
+    top: 60vh;
+    left: 30vw;
+}
+
+
+@media (max-width: 768px) {
+    .leftside, .rightside {
+        width: 100%; 
+    }
+
+    .Legalease {
+        font-size: 2rem;
+    }
+
+    .paragraph {
+        font-size: 1rem;
+    }
+
+    .circle1, .circle2, .circle3 {
+        display: none; 
+    }
+}
+
+.rightside {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px 20px;
+    box-sizing: border-box;
+}
+
+.heading {
+    color: #2B6745;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.subheading {
+    font-size: 1rem;
+    color: #7B7B7B;
+    
+}
+
+.name, .email, .password, .confirm {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-bottom: 5px;
+    color: #1B6831;
+}
+
+input {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #1C7034;
+    background-color: #EDF5ED;
+    height:3em;
+    padding: 0 10px; 
+    box-sizing: border-box;
+}
+
+
+
+form {
+    width: 100%;
+    height:80%;
+}
+
+.submit, .google {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #1B6831;
+  
+   
+}
+
+.submit {
+    background-color: #1B6831;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.google {
+    background-color: #ffffff;
+    color: #1B6831;
+}
+
+
+@media (max-width: 480px) {
+    .heading {
+        font-size: 1.5rem;
+    }
+
+    .subheading {
+        font-size: 0.9rem;
+    }
+
+    input, .submit, .google {
+        height: 35px;
+    }
+}
+
+.or-divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0px 0px 0px; /* Add margin to space it out */
+}
+
+.line {
+    flex: 1; /* Make the lines take up the remaining space */
+    height: 1px;
+    background-color: #ccc; /* Gray color for the lines */
+}
+
+.or-text {
+    margin: 0 10px;
+    color: #7B7B7B;
+    font-size: 0.9rem;
+}
+
+
+.circle1, .circle2, .circle3 {
+    transform: translateX(-100vw) rotate(0deg); 
+    opacity: 0;
+    animation: rollIn 2s ease-out forwards;
+}
+
+.circle1 {
+    animation-delay: 0.5s; 
+}
+
+.circle2 {
+    animation-delay: 0.7s;
+}
+
+.circle3 {
+    animation-delay: 0.9s;
+}
+
+
+@keyframes rollIn {
+    0% {
+        transform: translateX(-100vw) rotate(0deg); 
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0) rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+.img, .Legalease, .paragraph {
+    opacity: 0; 
+    transform: translateY(20px); 
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+
+.img {
+    animation-delay: 1s;
+}
+
+.Legalease {
+    animation-delay: 1.2s;
+}
+
+.paragraph {
+    animation-delay: 1.4s;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); 
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid #1C7034;
+    background-color: #EDF5ED;
+    height: 30px;
+    padding-left: 10px;
+    transition: all 0.3s ease; 
+}
+
+
+input[type="text"]:focus, input[type="password"]:focus {
+    outline: none;
+    border-color: #2B6745; 
+    box-shadow: 0 0 5px 2px rgba(43, 103, 69, 0.3); 
+    background-color: #ffffff; 
+}
+
+input[type="text"]::placeholder, input[type="password"]::placeholder {
+    color: #9E9E9E; 
+    font-style: normal;
+}
+
+
+.submit, .google {
+    margin: 20px 0px 0px 0px;
+    background-color: #1B6831;
+    color: #ffffff;
+    width: 101.3%;
+    height: 40px; 
+    border: 1px solid #1B6831;
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+    font-size: 14px;
+    cursor: pointer; 
+}
+
+
+.submit:hover {
+    background-color: #2B6745; 
+    box-shadow: 0 4px 10px rgba(43, 103, 69, 0.3); 
+    transform: translateY(-2px);
+}
+
+
+.submit:active {
+    background-color: #144023; 
+    box-shadow: 0 2px 5px rgba(20, 64, 35, 0.3); 
+    transform: translateY(2px); 
+}
+
+
+.google:hover {
+    background-color: #e6e6e6; 
+    color: #144023; 
+    box-shadow: 0 4px 10px rgba(43, 103, 69, 0.2); 
+    transform: translateY(-2px); 
+}
+
+
+.google:active {
+    background-color: #d4d4d4; 
+    color: #0e2e15; 
+    box-shadow: 0 2px 5px rgba(20, 64, 35, 0.2); 
+    transform: translateY(2px); 
+}
+
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .success-overlay h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .success-overlay p {
+    font-size: 1.5rem;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  /* Global style for all input fields */
+  .input1, 
+  .input2, 
+  .input3,
+  .input4 {
+      width: 100%;
+      border-radius: 10px;
+      border: 1px solid #1C7034;
+      background-color: #EDF5ED;
+      height: 3em;  /* Ensure the height is consistent */
+      padding: 0 10px; 
+      box-sizing: border-box;  /* Include padding and border in height */
+      transition: all 0.3s ease; 
+  }
+  
+  .input1:focus, 
+  .input2:focus, 
+  .input3:focus,
+  .input4:focus {
+      outline: none;
+      border-color: #2B6745; 
+      box-shadow: 0 0 5px 2px rgba(43, 103, 69, 0.3); 
+      background-color: #ffffff; 
+  }
+  
+  .input1::placeholder, 
+  .input2::placeholder, 
+  .input3::placeholder,
+  .input4::placeholder {
+      color: #9E9E9E; 
+      font-style: normal;
+  }
+  

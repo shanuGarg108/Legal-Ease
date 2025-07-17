@@ -1,0 +1,105 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amethysta&display=swap');
+
+/* Global Styles */
+.bodyy {
+    display: flex;
+    justify-content: center;
+}
+
+/* Heading Style */
+h1 {
+    font-family: 'Amethysta';
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: #28BF69;
+}
+
+/* Form Container Styles */
+.form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input and Textarea Styles */
+.form-container input[type="text"],
+.form-container textarea {
+    width: calc(100%);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-container input[type="text"]:focus,
+.form-container textarea:focus {
+    outline: none;
+    border-color: #28BF69;
+    box-shadow: none;
+}
+
+.form-container input[type="text"]::placeholder,
+.form-container textarea::placeholder {
+    font-family: "Amethysta";
+    color: #000000;
+}
+
+/* Textarea Styles */
+.experiencebox, .aboutmebox {
+    resize: vertical;
+    height: 100px;
+}
+
+/* Label Styles */
+.form-container div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    text-align: left;
+}
+
+/* Select Styles */
+.casebox {
+    width: calc(100%);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #E0E0E0;
+    border-radius: 4px;
+    font-size: 1rem;
+    color: #000000;
+    font-family: "Amethysta";
+}
+
+/* Placeholder-like Color for the Select Element */
+.casebox option[value=""][disabled] {
+    display: none; /* Hide the first option in the dropdown */
+    color: #9C9D9D;
+}
+
+/* Button Style */
+.form-container .buttton {
+    background-color: #28BF69;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.form-container .buttton:hover {
+    background-color: #28BF69;
+}

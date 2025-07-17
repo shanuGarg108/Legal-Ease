@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amethysta&family=Kaisei+HarunoUmi&display=swap');
+
+.container2 {
+    margin: 0em;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 70px; /* Fixed height */
+    padding: 0 1em; /* Add padding */
+    overflow: hidden; /* Prevent overflow issues */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Allow logo to take available space */
+}
+
+.imagelogo {
+    width: 62px;
+    height: 62px;
+    margin-right: 0.5rem;
+    object-fit: contain;
+}
+
+.legalease {
+    font-size: 1.8rem;
+    color: #719882;
+    font-family: "Kaisei HarunoUmi";
+    margin: 0;
+    line-height: 1;
+}
+
+nav {
+    flex: 2; /* Allow nav to take more space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.webname {
+    margin-top: 0.3em;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 80%; /* Adjust width */
+    overflow: hidden; /* Prevent content from overflowing */
+}
+
+li {
+    font-family: "Amethysta";
+    letter-spacing: 0.5px;
+    font-size: 1rem;
+    padding: 0.5em;
+}
+
+.buttons {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+    white-space: nowrap;
+}
+
+.buttons.login, .buttons.profile {
+    height: 40px;
+    padding: 0.5em 1em;
+    border-radius: 2em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.buttons.login {
+    background-color: white;
+    border: 1px solid black;
+}
+
+.buttons.profile {
+    background-color: #28BF69;
+    border: 1px solid #28BF69;
+    color: white;
+}
+
+.buttons.login:hover, .buttons.profile:hover {
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto; /* Adjust height for vertical stacking */
+    }
+
+    .logo {
+        margin-bottom: 1em;
+        flex-direction: row;
+    }
+
+    nav {
+        margin-bottom: 1em;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .buttons {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .legalease {
+        font-size: 1.4rem; /* Adjust font size */
+    }
+
+    li {
+        font-size: 0.9rem; /* Adjust font size */
+    }
+
+    .login, .profile {
+        height: 35px;
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+nav ul li a {
+    text-decoration: none; /* Removes the underline */
+    color: inherit; /* Inherits the color from the parent element */
+    font-weight: bold; /* Makes the text bold (optional) */
+    padding: 10px; /* Adds some padding */
+    transition: color 0.3s ease; /* Adds a transition effect */
+  }
+  
+  /* Hover effect for the links */
+  nav ul li a:hover {
+    color: #007bff; /* Changes the color on hover */
+    text-decoration: underline; /* Optionally, add an underline on hover */
+  }
