@@ -83,12 +83,5 @@ Contributions are welcome! If you'd like to contribute, please follow these step
 4. Push to the branch (`git push origin feature/your-feature-name`).
 5. Open a Pull Request.
 
-## Contact
-
-For questions or inquiries, please contact:  
-**Himank Yadav** - [himanky218@gmail.com](mailto:himanky218@gmail.com)  
-[X profile](https://x.com/himankyadavv)
-
----
 
 Thank you for visiting **Legal Ease**!
